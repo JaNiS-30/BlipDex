@@ -11,7 +11,6 @@ module.exports = {
             return this.getMove(data);
         }
         catch (err) {
-
             return err.response.data
         }
     },
