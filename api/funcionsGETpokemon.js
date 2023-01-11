@@ -6,11 +6,11 @@ module.exports = {
             let url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
 
             const response = await axios.get(url)
+
             let data = (response.data);
             return this.pokemonBigData(data);
         }
         catch (err) {
-
             return err.response.data
         }
     },
@@ -25,15 +25,19 @@ module.exports = {
 
         let pokeTypes = '';
         const listOfTypes = poke.types.forEach(item => {
-            pokeTypes += " " + item.type.name;
+            pokeTypes += ", " + item.type.name;
         });
+        pokeTypes = pokeTypes.substring(1)
         pokeTypes = pokeTypes.trim();
+
 
         let pokeAbilities = '';
         const listOfAbilities = poke.abilities.forEach(item => {
-            pokeAbilities += " " + item.ability.name;
+            pokeAbilities += ", " + item.ability.name;
         });
+        pokeAbilities = pokeAbilities.substring(1)
         pokeAbilities = pokeAbilities.trim();
+
 
         informations = {
             "pokeNumber": pokeNumber,
