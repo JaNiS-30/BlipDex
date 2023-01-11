@@ -21,7 +21,7 @@ module.exports = {
         const pokeNumber = poke.id;
         const pokeWeight = (poke.weight / 10);
         const pokeHeight = (poke.height / 10);
-        const pokeImage = poke.sprites.other.dream_world.front_default;
+        const pokeImage = poke.sprites.other['official-artwork'];
 
         let pokeTypes = '';
         const listOfTypes = poke.types.forEach(item => {
