@@ -47,5 +47,5 @@ app.get('/ability/:name', async (req, res) => {
 });
 
 
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => console.log(`Server is running in port ${PORT}`));
+// const PORT = process.env.PORT || 8080;
+// app.listen(PORT, () => console.log(`Server is running in port ${PORT}`));
