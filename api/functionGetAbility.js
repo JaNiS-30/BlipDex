@@ -22,15 +22,10 @@ module.exports = {
         let seed = 0;
         let pokes = [];
         let listMax = 5;
-        let txT = '';
 
         listOfPokes = this.filterPokeName(listOfPokes);
 
         if (listOfPokes.length < 5) listMax = listOfPokes.length
-
-        //console.log(listOfPokes)
-
-        ///////////////////////////////////////////////////////////////////////////////// FALTA CONTINUAR DAQUI SORTEAR DNV SE PEGA IGUAL 
 
         for (let i = 0; i < listMax; i++) {
             seed = Math.round(Math.random() * listOfPokes.length);
