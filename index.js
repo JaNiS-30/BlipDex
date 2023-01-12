@@ -1,9 +1,9 @@
 const express = require("express");
 const app  = express();
 const GETpokemon = require("./api/functionGetPokemon");
-const GETmove = require("./api/functionGetMove");
 const GETitem = require("./api/functionGetItem");
 const GETability = require("./api/functionGetAbility");
+const GETmove = require("./api/functionGetMove");
 
 app.use(express.json({ extended: false }));
 app.use(express.json())
@@ -47,5 +47,5 @@ app.get('/ability/:name', async (req, res) => {
 });
 
 
-// const PORT = process.env.PORT || 8080;
-// app.listen(PORT, () => console.log(`Server is running in port ${PORT}`));
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => console.log(`Server is running in port ${PORT}`));
